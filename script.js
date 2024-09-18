@@ -204,4 +204,5 @@ if(age==18 ) {
       console.log(`let it be undefined :D (loose)`);
 }
 
-const year = 1991
+const year = 1991;
+
