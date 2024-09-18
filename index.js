@@ -16,33 +16,32 @@ function userRegister() {
   const age = prompt("How old are you?");
 
   //Conditional Statements
-  if (age <= 18) {
+  if (age < 18) {
     alert("You are not Eligible to vote");
   } else {
-    completeUserSetup();
+    completeUserSetup(firstName, age);
   }
 }
 
 /**
  * Complete the user register process where user's age is > 18
  */
-function completeUserSetup() {
+function completeUserSetup(firstName, age) {
   const catName = prompt("What is your Cat's name?");
   const catHeight = prompt("How tall is your cat?");
-  alert('Registration Sucessful')
+
+  const Person = {
+    firstName,
+    age,
+  };
+
+  const Cat = {
+    catName,
+    catHeight,
+  };
+  
+  console.log(Person);
+  alert(`Welcome, ${firstName}`)
 }
 
 userRegister();
-
-// User Object
-const Person = {
-  firstName,
-  age,
-  height,
-};
-
-const Cat = {
-  catName,
-  age,
-  height,
-};
