@@ -4,35 +4,45 @@
  * It is used to store VARIOUS KEYED COLLECTIONS
  */
 
-const firstName = prompt('What is your First Name?');
-const catName = prompt('What is your Cat?');
-
-const lastName = prompt('What is your last Name?');
-const middleName = prompt('What is your middle Name?');
-const age = prompt('How old are you?');
-const height = prompt('How tall are you in CM');
-const catAge = prompt('How old is your cat?');
-const catHeight = prompt('How tall is your cat?');
-
-
-// User Object
-
-const Person = {
-    firstName,
-    lastName,
-    middleName,
-    age,
-    height
-}
-
-const Cat = {
-    catName,
-    age,
-    height
-}
-
-//Conditional Statements
 /**
- * 
+ * Function to handle user login into the app
  */
 
+/**
+ * Register User
+ */
+function userRegister() {
+  const firstName = prompt("What is your First Name?");
+  const age = prompt("How old are you?");
+
+  //Conditional Statements
+  if (age <= 18) {
+    alert("You are not Eligible to vote");
+  } else {
+    completeUserSetup();
+  }
+}
+
+/**
+ * Complete the user register process where user's age is > 18
+ */
+function completeUserSetup() {
+  const catName = prompt("What is your Cat's name?");
+  const catHeight = prompt("How tall is your cat?");
+  alert('Registration Sucessful')
+}
+
+userRegister();
+
+// User Object
+const Person = {
+  firstName,
+  age,
+  height,
+};
+
+const Cat = {
+  catName,
+  age,
+  height,
+};
